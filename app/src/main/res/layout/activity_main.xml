@@ -1,0 +1,41 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <!-- <TextView
+        android:id="@+id/list_item_forecast_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="FORECAST"
+        android:textSize="24sp"/> -->
+    <LinearLayout
+        android:id="@+id/mid_line"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/darker_gray">
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/mid_line"/>
+      <!--  android:layout_below="@id/list_item_forecast_textview"> -->
+
+
+    <fragment
+        android:id="@+id/fragment_container"
+        android:name="com.example.steven.sunshine.MainActivityFragment"
+        tools:layout="@layout/fragment_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/mid_line"/>
+
+</RelativeLayout>
